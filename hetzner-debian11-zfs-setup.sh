@@ -41,7 +41,7 @@ c_deb_security_repo=https://mirror.hetzner.com/debian/security
 c_default_zfs_arc_max_mb=250
 c_default_bpool_tweaks="-o ashift=12 -O compression=lz4"
 c_default_rpool_tweaks="-o ashift=12 -O acltype=posixacl -O compression=zstd-9 -O dnodesize=auto -O relatime=on -O xattr=sa -O normalization=formD"
-c_default_hostname=terem
+c_default_hostname=ho-km2.amellus.net
 c_zfs_mount_dir=/mnt
 c_log_dir=$(dirname "$(mktemp)")/zfs-hetzner-vm
 c_install_log=$c_log_dir/install.log
