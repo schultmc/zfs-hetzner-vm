@@ -624,12 +624,16 @@ ip6addr_prefix=$(ip -6 a s | grep -E "inet6.+global" | sed -nE 's/.+inet6\s(([0-
 
 cat <<CONF > /mnt/etc/systemd/network/10-eth0.network
 [Match]
-Name=eth0
+MACAddress=c8:60:00:54:c0:1b # Main network interface MAC
 
 [Network]
-DHCP=ipv4
 Address=${ip6addr_prefix}:1/64
+Gateway=5.9.37.193
 Gateway=fe80::1
+
+[Address]
+Address=5.9.37.211
+Peer=5.9.37.193/27 #Gateway
 CONF
 chroot_execute "systemctl enable systemd-networkd.service"
 
