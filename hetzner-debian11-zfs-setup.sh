@@ -25,7 +25,7 @@ v_rpool_tweaks=
 declare -a v_selected_disks
 v_swap_size=                 # integer
 v_free_tail_space=           # integer
-v_hostname=
+v_hostname=ho-km2
 v_kernel_variant=
 v_zfs_arc_max_mb=
 v_root_password=
@@ -380,13 +380,13 @@ function ask_hostname {
   # shellcheck disable=SC2119
   print_step_info_header
 
-  local hostname_invalid_message=
+#  local hostname_invalid_message=
 
-  while [[ ! $v_hostname =(?=^.{4,253}$)(^(?:[a-zA-Z0-9](?:(?:[a-zA-Z0-9\-]){0,61}[a-zA-Z0-9])?\.)+([a-zA-Z]{2,}|xn--[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])$) ]]; do
-    v_hostname=$(dialog --inputbox "${hostname_invalid_message}Set the host name" 30 100 "$c_default_hostname" 3>&1 1>&2 2>&3)
-
-    hostname_invalid_message="Invalid host name! "
-  done
+#  while [[ ! $v_hostname =?=^.{4,253}$(^(?:[a-zA-Z0-9](?:(?:[a-zA-Z0-9\-]){0,61}[a-zA-Z0-9])?\.)+([a-zA-Z]{2,}|xn--[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])$) ]]; do
+#    v_hostname=$(dialog --inputbox "${hostname_invalid_message}Set the host name" 30 100 "$c_default_hostname" 3>&1 1>&2 2>&3)
+#
+#    hostname_invalid_message="Invalid host name! "
+#  done
 
   print_variables v_hostname
 }
@@ -856,4 +856,3 @@ echo "======= unmounting filesystems and zfs pools =========="
 unmount_and_export_fs
 
 echo "======== setup complete, rebooting ==============="
-reboot
