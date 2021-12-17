@@ -627,7 +627,7 @@ cat <<CONF > /mnt/etc/systemd/network/10-eth0.network
 MACAddress=c8:60:00:54:c0:1b # Main network interface MAC
 
 [Network]
-Address=${ip6addr_prefix}:1/64
+Address=2a01:4f8:161:21cb::2
 Gateway=5.9.37.193
 Gateway=fe80::1
 
@@ -817,8 +817,8 @@ esac
 
 configure_networking
 
-ip route add 172.31.1.1/255.255.255.255 dev ens3
-ip route add default via 172.31.1.1 dev ens3
+ip route add 5.9.37.211/255.255.255.224 dev eth0
+ip route add default via 5.9.37.193 dev eth0
 CONF
 
 chmod 755 "$c_zfs_mount_dir/usr/share/initramfs-tools/scripts/init-premount/static-route"
