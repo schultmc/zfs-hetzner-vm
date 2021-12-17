@@ -1,6 +1,6 @@
 # zfs-hetzner-vm
 
-[![shellcheck](https://github.com/terem42/zfs-hetzner-vm/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/terem42/zfs-hetzner-vm/actions/workflows/shellcheck.yml)
+[![shellcheck](https://github.com/schultmc/zfs-hetzner-vm/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/schultmc/zfs-hetzner-vm/actions/workflows/shellcheck.yml)
 
 Scripts to install Debian 11, 10 or Ubuntu 20, 18 with ZFS root on Hetzner root servers (virtual and dedicated).<br/>
 __WARNING:__ all data on the disk will be destroyed.
@@ -15,25 +15,25 @@ __WARNING:__ all data on the disk will be destroyed.
 Debian 11 minimal setup with SSH server
 
 ````bash
-wget -qO- https://raw.githubusercontent.com/terem42/zfs-hetzner-vm/master/hetzner-debian11-zfs-setup.sh | bash -
+wget -qO- https://raw.githubusercontent.com/schultmc/zfs-hetzner-vm/master/hetzner-debian11-zfs-setup.sh | bash -
 ````
 
 Ubuntu 20 LTS minimal setup with SSH server
 
 ````bash
-wget -qO- https://raw.githubusercontent.com/terem42/zfs-hetzner-vm/master/hetzner-ubuntu20-zfs-setup.sh | bash -
+wget -qO- https://raw.githubusercontent.com/schultmc/zfs-hetzner-vm/master/hetzner-ubuntu20-zfs-setup.sh | bash -
 ````
 
 Debian 10 minimal setup with SSH server
 
 ````bash
-wget -qO- https://raw.githubusercontent.com/terem42/zfs-hetzner-vm/master/hetzner-debian10-zfs-setup.sh | bash -
+wget -qO- https://raw.githubusercontent.com/schultmc/zfs-hetzner-vm/master/hetzner-debian10-zfs-setup.sh | bash -
 ````
 
 Ubuntu 18.04 LTS minimal setup with SSH server
 
 ````bash
-wget -qO- https://raw.githubusercontent.com/terem42/zfs-hetzner-vm/master/hetzner-ubuntu18-zfs-setup.sh | bash -
+wget -qO- https://raw.githubusercontent.com/schultmc/zfs-hetzner-vm/master/hetzner-ubuntu18-zfs-setup.sh | bash -
 ````
 
 Answer script questions about desired hostname and ZFS ARC cache size.
